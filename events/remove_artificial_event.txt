@@ -1,6 +1,6 @@
-namespace = remove_artifical
+namespace = remove_artificial
 system_event = {
-	id = remove_artifical.1
+	id = remove_artificial.1
 	is_triggered_only = yes
 	hide_window = yes
 	immediate = {
@@ -21,11 +21,20 @@ system_event = {
 }
 
 planet_event = {
-	id = remove_artifical.2
+	id = remove_artificial.2
 	is_triggered_only = yes
 	hide_window = yes
 	immediate = {
+		remove_all_buildings = yes
+	}
+}
 
-		}
+planet_event = {
+	id = remove_artificial.3
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		remove_all_buildings = yes
+		remove_all_districts = yes
 	}
 }
