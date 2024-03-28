@@ -1,0 +1,31 @@
+namespace = remove_artifical
+system_event = {
+	id = remove_artifical.1
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		solar_system = {
+			every_system_planet = {
+				orbital_station = {
+					dismantle = yes
+				}
+			}
+			every_system_megastructure = {
+				remove_megastructure = this
+			}
+			starbase.fleet = {
+				dismantle = yes
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = remove_artifical.2
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+
+		}
+	}
+}
