@@ -1,10 +1,8 @@
 planet_decision_remove_stations = {
-	enactment_time = 0
-
+	enactment_time = 30
 	resources = {
 		category = decisions
 	}
-
 	potential = {
 		exists = solar_system.owner
 		solar_system = {
@@ -14,11 +12,9 @@ planet_decision_remove_stations = {
 			is_ai = no
 		}
 	}
-
 	allow = {
 		always = yes
 	}
-
 	effect = {
 		solar_system = {
 			system_event = {
@@ -29,7 +25,7 @@ planet_decision_remove_stations = {
 }
 
 planet_decision_remove_buildings = {
-	enactment_time = 0
+	enactment_time = 30
 	resources = {
 		category = decisions
 	}
@@ -47,14 +43,14 @@ planet_decision_remove_buildings = {
 		always = yes
 	}
 	effect = {
-        planet_event = {
-            id = remove_artificial.2
-        }
+		planet_event = {
+			id = remove_artificial.2
+		}
 	}
 }
 
 planet_decision_remove_buildings_districts = {
-	enactment_time = 0
+	enactment_time = 30
 	resources = {
 		category = decisions
 	}
@@ -72,8 +68,34 @@ planet_decision_remove_buildings_districts = {
 		always = yes
 	}
 	effect = {
-        planet_event = {
-            id = remove_artificial.3
-        }
+		planet_event = {
+			id = remove_artificial.3
+		}
+	}
+}
+
+planet_decision_abandon_system = {
+	enactment_time = 30
+	resources = {
+		category = decisions
+	}
+	potential = {
+		exists = solar_system.owner
+		solar_system = {
+			is_capital_system = no
+		}
+		solar_system.owner = {
+			is_ai = no
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+		solar_system = {
+			system_event = {
+				id = remove_artificial.4
+			}
+		}
 	}
 }
