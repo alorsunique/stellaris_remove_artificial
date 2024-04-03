@@ -9,6 +9,7 @@ system_event = {
 				orbital_station = {
 					dismantle = yes
 				}
+				remove_planet_flag = has_megastructure
 			}
 			every_system_megastructure = {
 				remove_megastructure = this
@@ -36,5 +37,30 @@ planet_event = {
 	immediate = {
 		remove_all_buildings = yes
 		remove_all_districts = yes
+	}
+}
+
+system_event = {
+	id = remove_artificial.4
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		solar_system = {
+			every_system_planet = {
+				orbital_station = {
+					dismantle = yes
+				}
+				remove_planet_flag = has_megastructure
+				remove_all_buildings = yes
+				remove_all_districts = yes
+			}
+			every_system_megastructure = {
+				remove_megastructure = this
+			}
+			starbase.fleet = {
+				dismantle = yes
+			}
+		}
 	}
 }
